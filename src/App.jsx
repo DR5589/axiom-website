@@ -12,8 +12,6 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // For now, just show success message
-    // In production, this would connect to a form backend like Formspree, Netlify Forms, etc.
     setFormSubmitted(true)
   }
 
@@ -76,9 +74,9 @@ function App() {
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-axiom-accent/10 rounded-full blur-[128px]"></div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          {/* SDVOSB Badge - removed green dot */}
+          {/* SDVOSB Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full mb-8">
-            <span className="text-sm text-gray-400">Service-Disabled Veteran-Owned Small Business</span>
+            <span className="text-xs text-gray-400">Service-Disabled Veteran-Owned Small Business</span>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight">
@@ -86,14 +84,14 @@ function App() {
             <span className="text-gray-400">Delivered.</span>
           </h1>
 
-          <p className="text-xl text-gray-400 max-w-xl mx-auto mb-10 leading-relaxed">
+          <p className="text-base text-gray-400 max-w-xl mx-auto mb-12 leading-relaxed">
             Axiom Group is a veteran-owned procurement partner built for federal buyers. We source MRO, IT hardware, and specialty supplies—on time, on contract, without the overhead.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#contact"
-              className="px-8 py-4 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition-colors"
+              className="px-8 py-4 bg-axiom-accent text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors"
             >
               Request Capability Statement
             </a>
@@ -117,7 +115,7 @@ function App() {
       {/* Credibility Bar */}
       <section className="py-6 bg-axiom-gray/50 border-y border-white/5">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-sm text-gray-400">
+          <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-xs text-gray-400">
             <span className="font-medium text-white">SDVOSB Certified</span>
             <span className="hidden md:inline text-gray-600">•</span>
             <span><span className="text-gray-500">UEI:</span> XSVAANVXZGM1</span>
@@ -130,16 +128,16 @@ function App() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-24 bg-axiom-gray">
+      <section id="services" className="py-32 bg-axiom-gray">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-20">
             <h2 className="text-4xl font-bold mb-4">What We Deliver</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <p className="text-sm text-gray-400 max-w-2xl mx-auto leading-relaxed">
               We handle vendor sourcing, quoting, and delivery logistics—so your team can focus on mission execution.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-8">
             {/* MRO */}
             <div className="p-8 bg-axiom-dark border border-white/5 rounded-2xl hover:border-white/10 transition-colors group">
               <div className="w-12 h-12 bg-axiom-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-axiom-accent/20 transition-colors">
@@ -148,8 +146,8 @@ function App() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-3">MRO Supplies</h3>
-              <p className="text-gray-400 leading-relaxed">
+              <h3 className="text-lg font-semibold mb-3">MRO Supplies</h3>
+              <p className="text-sm text-gray-400 leading-relaxed">
                 Hand tools, fasteners, HVAC components, electrical supplies, plumbing parts, janitorial products, and industrial equipment—sourced from authorized distributors, quoted to your specs.
               </p>
             </div>
@@ -161,8 +159,8 @@ function App() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-3">IT & Hardware</h3>
-              <p className="text-gray-400 leading-relaxed">
+              <h3 className="text-lg font-semibold mb-3">IT & Hardware</h3>
+              <p className="text-sm text-gray-400 leading-relaxed">
                 Monitors, docking stations, keyboards, cables, networking gear, and peripherals. We work with authorized resellers to meet TAA and compliance requirements.
               </p>
             </div>
@@ -174,60 +172,179 @@ function App() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-3">General Procurement</h3>
-              <p className="text-gray-400 leading-relaxed">
+              <h3 className="text-lg font-semibold mb-3">General Procurement</h3>
+              <p className="text-sm text-gray-400 leading-relaxed">
                 Office furniture, safety gear, signage, medical supplies, and specialty items. If your agency needs it and it ships, we can source it.
               </p>
             </div>
           </div>
 
           {/* Data Panel */}
-          <div className="mt-16 grid md:grid-cols-4 gap-6">
+          <div className="mt-20 grid md:grid-cols-4 gap-6">
             <div className="p-6 bg-axiom-dark border border-white/5 rounded-xl text-center">
-              <div className="text-3xl font-bold text-white mb-2">100%</div>
-              <div className="text-sm text-gray-500">Veteran-Owned</div>
+              <div className="text-2xl font-bold text-white mb-2">100%</div>
+              <div className="text-xs text-gray-500">Veteran-Owned</div>
             </div>
             <div className="p-6 bg-axiom-dark border border-white/5 rounded-xl text-center">
-              <div className="text-3xl font-bold text-white mb-2">SAM</div>
-              <div className="text-sm text-gray-500">Registered</div>
+              <div className="text-2xl font-bold text-white mb-2">SAM</div>
+              <div className="text-xs text-gray-500">Registered</div>
             </div>
             <div className="p-6 bg-axiom-dark border border-white/5 rounded-xl text-center">
-              <div className="text-3xl font-bold text-white mb-2">GSA</div>
-              <div className="text-sm text-gray-500">Schedule Pending</div>
+              <div className="text-2xl font-bold text-white mb-2">GSA</div>
+              <div className="text-xs text-gray-500">Schedule Pending</div>
             </div>
             <div className="p-6 bg-axiom-dark border border-white/5 rounded-xl text-center">
-              <div className="text-3xl font-bold text-white mb-2">CONUS</div>
-              <div className="text-sm text-gray-500">Delivery</div>
+              <div className="text-2xl font-bold text-white mb-2">CONUS</div>
+              <div className="text-xs text-gray-500">Delivery</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-24 bg-axiom-dark">
+      {/* Execution Model Strip */}
+      <section className="py-20 bg-axiom-dark border-y border-white/5">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-axiom-accent/10 rounded-full mb-6">
-                <span className="text-sm text-axiom-accent font-medium">About Axiom Group</span>
-              </div>
-              <h2 className="text-4xl font-bold mb-6">
-                Built for Federal<br />
-                Procurement.
-              </h2>
-              <p className="text-gray-400 mb-6 leading-relaxed max-w-lg">
-                Axiom Group, Inc. is a Service-Disabled Veteran-Owned Small Business (SDVOSB) headquartered in Chicago, IL. We specialize in procurement support for federal agencies—sourcing MRO supplies, IT hardware, and general equipment through a vetted network of distributors and manufacturers.
-              </p>
-              <p className="text-gray-400 mb-6 leading-relaxed max-w-lg">
-                We are registered in SAM.gov and actively pursuing GSA Schedule placement. Our team handles quoting, vendor coordination, and delivery logistics—allowing contracting officers and program managers to meet requirements faster, with less administrative burden.
-              </p>
-              <p className="text-gray-400 leading-relaxed max-w-lg">
-                We operate with a straightforward model: competitive pricing, responsive communication, and reliable delivery. We're currently seeking subcontracting opportunities with prime contractors supporting DoD, DHS, VA, and civilian agencies.
-              </p>
+          <h3 className="text-center text-lg font-semibold mb-12">Our Execution Model</h3>
+
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-0">
+            {/* Source */}
+            <div className="text-center px-6">
+              <div className="text-axiom-accent font-semibold mb-2">Source</div>
+              <div className="text-xs text-gray-500">Authorized distributor<br />sourcing</div>
             </div>
 
+            <div className="hidden md:block text-gray-600 text-2xl">→</div>
+
+            {/* Quote */}
+            <div className="text-center px-6">
+              <div className="text-axiom-accent font-semibold mb-2">Quote</div>
+              <div className="text-xs text-gray-500">Rapid quoting</div>
+            </div>
+
+            <div className="hidden md:block text-gray-600 text-2xl">→</div>
+
+            {/* Fulfill */}
+            <div className="text-center px-6">
+              <div className="text-axiom-accent font-semibold mb-2">Fulfill</div>
+              <div className="text-xs text-gray-500">Order tracking<br />and logistics</div>
+            </div>
+
+            <div className="hidden md:block text-gray-600 text-2xl">→</div>
+
+            {/* Deliver */}
+            <div className="text-center px-6">
+              <div className="text-axiom-accent font-semibold mb-2">Deliver</div>
+              <div className="text-xs text-gray-500">On-time delivery</div>
+            </div>
+
+            <div className="hidden md:block text-gray-600 text-2xl">→</div>
+
+            {/* Report */}
+            <div className="text-center px-6">
+              <div className="text-axiom-accent font-semibold mb-2">Report</div>
+              <div className="text-xs text-gray-500">Post-delivery<br />reporting</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section - Capability Statement Layout */}
+      <section id="about" className="py-32 bg-axiom-gray">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-16">
+            {/* Left Column - Structured Capability Data */}
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-axiom-accent/10 rounded-full mb-6">
+                <span className="text-xs text-axiom-accent font-medium">About Axiom Group</span>
+              </div>
+              <h2 className="text-3xl font-bold mb-6">
+                Built for Federal<br />Procurement.
+              </h2>
+              <p className="text-sm text-gray-400 mb-10 leading-relaxed">
+                Axiom Group, Inc. is a Service-Disabled Veteran-Owned Small Business providing procurement and supply fulfillment for federal agencies.
+              </p>
+
+              {/* Core Capabilities */}
+              <div className="mb-10">
+                <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">Core Capabilities</h4>
+                <ul className="space-y-2 text-sm text-gray-300">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1 h-1 bg-axiom-accent rounded-full"></span>
+                    MRO supplies and industrial equipment
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1 h-1 bg-axiom-accent rounded-full"></span>
+                    IT hardware and peripherals
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1 h-1 bg-axiom-accent rounded-full"></span>
+                    General and specialty procurement
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1 h-1 bg-axiom-accent rounded-full"></span>
+                    Vendor sourcing and quoting
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1 h-1 bg-axiom-accent rounded-full"></span>
+                    Delivery logistics and fulfillment
+                  </li>
+                </ul>
+              </div>
+
+              {/* Differentiators */}
+              <div className="mb-10">
+                <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">Differentiators</h4>
+                <ul className="space-y-2 text-sm text-gray-300">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1 h-1 bg-axiom-accent rounded-full"></span>
+                    SDVOSB prime
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1 h-1 bg-axiom-accent rounded-full"></span>
+                    SAM registered
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1 h-1 bg-axiom-accent rounded-full"></span>
+                    Authorized distributor network
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1 h-1 bg-axiom-accent rounded-full"></span>
+                    TAA-compliant sourcing
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1 h-1 bg-axiom-accent rounded-full"></span>
+                    Responsive quoting and fulfillment
+                  </li>
+                </ul>
+              </div>
+
+              {/* Corporate Data */}
+              <div>
+                <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">Corporate Data</h4>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <span className="text-gray-500">UEI:</span>
+                    <span className="text-white ml-2">XSVAANVXZGM1</span>
+                  </div>
+                  <div>
+                    <span className="text-gray-500">CAGE:</span>
+                    <span className="text-white ml-2">181C2</span>
+                  </div>
+                  <div>
+                    <span className="text-gray-500">HQ:</span>
+                    <span className="text-white ml-2">Chicago, IL</span>
+                  </div>
+                  <div>
+                    <span className="text-gray-500">Delivery:</span>
+                    <span className="text-white ml-2">CONUS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column - SDVOSB Card */}
             <div className="relative">
-              <div className="aspect-square bg-axiom-gray rounded-2xl border border-white/5 flex items-center justify-center">
+              <div className="aspect-square bg-axiom-dark rounded-2xl border border-white/5 flex items-center justify-center">
                 <div className="text-center p-8">
                   <div className="w-24 h-24 mx-auto mb-6 bg-axiom-accent/10 rounded-2xl flex items-center justify-center">
                     <svg className="w-12 h-12 text-axiom-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -235,7 +352,7 @@ function App() {
                     </svg>
                   </div>
                   <h3 className="text-2xl font-bold mb-2">SDVOSB</h3>
-                  <p className="text-gray-500">Service-Disabled Veteran-Owned<br />Small Business</p>
+                  <p className="text-sm text-gray-500">Service-Disabled Veteran-Owned<br />Small Business</p>
                 </div>
               </div>
 
@@ -246,8 +363,8 @@ function App() {
           </div>
 
           {/* NAICS Codes */}
-          <div className="mt-16 p-8 bg-axiom-gray border border-white/5 rounded-2xl">
-            <h3 className="text-lg font-semibold mb-4">Primary NAICS Codes</h3>
+          <div className="mt-20 p-8 bg-axiom-dark border border-white/5 rounded-2xl">
+            <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-6">Primary NAICS Codes</h4>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               <div className="text-sm">
                 <span className="text-axiom-accent font-mono">423710</span>
@@ -275,34 +392,53 @@ function App() {
               </div>
             </div>
           </div>
+
+          {/* Relevant Experience */}
+          <div className="mt-8 p-8 bg-axiom-dark border border-white/5 rounded-2xl">
+            <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-6">Relevant Experience</h4>
+            <ul className="space-y-3 text-sm text-gray-300">
+              <li className="flex items-start gap-3">
+                <span className="w-1 h-1 bg-axiom-accent rounded-full mt-2"></span>
+                Team experience supporting DoD, DHS, VA procurement programs
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="w-1 h-1 bg-axiom-accent rounded-full mt-2"></span>
+                Commercial distributor relationships across MRO and IT categories
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="w-1 h-1 bg-axiom-accent rounded-full mt-2"></span>
+                Fulfillment and logistics experience across multi-site operations
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 bg-axiom-gray">
+      <section id="contact" className="py-32 bg-axiom-dark">
         <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Let's Work Together</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold mb-4">Let's Work Together</h2>
+            <p className="text-sm text-gray-400 max-w-2xl mx-auto leading-relaxed">
               Whether you're a contracting officer, prime contractor, or agency buyer—we'd like to hear from you.
             </p>
           </div>
 
           {formSubmitted ? (
-            <div className="max-w-xl mx-auto p-8 bg-axiom-dark border border-axiom-accent/20 rounded-2xl text-center">
+            <div className="max-w-xl mx-auto p-8 bg-axiom-gray border border-axiom-accent/20 rounded-2xl text-center">
               <div className="w-16 h-16 mx-auto mb-6 bg-axiom-accent/10 rounded-full flex items-center justify-center">
                 <svg className="w-8 h-8 text-axiom-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Message Received</h3>
-              <p className="text-gray-400">Thank you for reaching out. We'll get back to you within 1-2 business days.</p>
+              <h3 className="text-lg font-semibold mb-2">Message Received</h3>
+              <p className="text-sm text-gray-400">Thank you for reaching out. We'll get back to you within 1-2 business days.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="max-w-xl mx-auto">
               <div className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">
+                  <label htmlFor="name" className="block text-xs font-medium text-gray-400 mb-2">
                     Name
                   </label>
                   <input
@@ -312,13 +448,13 @@ function App() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-axiom-dark border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-axiom-accent/50 transition-colors"
+                    className="w-full px-4 py-3 bg-axiom-gray border border-white/10 rounded-lg text-sm text-white placeholder-gray-500 focus:outline-none focus:border-axiom-accent/50 transition-colors"
                     placeholder="Your name"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2">
+                  <label htmlFor="email" className="block text-xs font-medium text-gray-400 mb-2">
                     Email
                   </label>
                   <input
@@ -328,13 +464,13 @@ function App() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-axiom-dark border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-axiom-accent/50 transition-colors"
+                    className="w-full px-4 py-3 bg-axiom-gray border border-white/10 rounded-lg text-sm text-white placeholder-gray-500 focus:outline-none focus:border-axiom-accent/50 transition-colors"
                     placeholder="you@agency.gov"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="organization" className="block text-sm font-medium text-gray-400 mb-2">
+                  <label htmlFor="organization" className="block text-xs font-medium text-gray-400 mb-2">
                     Organization
                   </label>
                   <input
@@ -343,13 +479,13 @@ function App() {
                     name="organization"
                     value={formData.organization}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-axiom-dark border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-axiom-accent/50 transition-colors"
+                    className="w-full px-4 py-3 bg-axiom-gray border border-white/10 rounded-lg text-sm text-white placeholder-gray-500 focus:outline-none focus:border-axiom-accent/50 transition-colors"
                     placeholder="Agency or company name"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2">
+                  <label htmlFor="message" className="block text-xs font-medium text-gray-400 mb-2">
                     Message
                   </label>
                   <textarea
@@ -359,14 +495,14 @@ function App() {
                     rows={5}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-axiom-dark border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-axiom-accent/50 transition-colors resize-none"
+                    className="w-full px-4 py-3 bg-axiom-gray border border-white/10 rounded-lg text-sm text-white placeholder-gray-500 focus:outline-none focus:border-axiom-accent/50 transition-colors resize-none"
                     placeholder="Tell us about your requirements or request a capability statement..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full px-8 py-4 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition-colors"
+                  className="w-full px-8 py-4 bg-axiom-accent text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors"
                 >
                   Send Message
                 </button>
@@ -374,8 +510,8 @@ function App() {
             </form>
           )}
 
-          <div className="mt-12 p-6 bg-axiom-dark/50 border border-white/5 rounded-xl text-center">
-            <p className="text-gray-500 text-sm">
+          <div className="mt-16 p-6 bg-axiom-gray/50 border border-white/5 rounded-xl text-center">
+            <p className="text-gray-500 text-xs">
               <span className="text-white">Axiom Group, Inc.</span><br />
               Chicago, IL
             </p>
@@ -386,10 +522,10 @@ function App() {
       {/* Footer */}
       <footer className="py-8 bg-axiom-dark border-t border-white/5">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-sm text-gray-500">
+          <div className="text-xs text-gray-500">
             © 2026 Axiom Group, Inc. All rights reserved.
           </div>
-          <div className="flex items-center gap-6 text-sm text-gray-500">
+          <div className="flex items-center gap-6 text-xs text-gray-500">
             <span>SDVOSB</span>
             <span>•</span>
             <span>UEI: XSVAANVXZGM1</span>
