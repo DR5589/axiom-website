@@ -80,12 +80,12 @@ function App() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight">
-            Mission-critical supplies<br />and equipment.{' '}
+            Supplies and equipment<br />for federal agencies.{' '}
             <span className="text-gray-400">Delivered.</span>
           </h1>
 
           <p className="text-base text-gray-400 max-w-xl mx-auto mb-12 leading-relaxed">
-            Axiom Group is a veteran-owned procurement partner built for federal buyers. We source MRO, IT hardware, and specialty supplies—on time, on contract, without the overhead.
+            Axiom Group is a veteran-owned procurement partner built for federal buyers. We source MRO, IT hardware, and specialty supplies. On time, on contract, without the overhead.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -122,6 +122,8 @@ function App() {
             <span className="hidden md:inline text-gray-600">•</span>
             <span><span className="text-gray-500">CAGE:</span> 181C2</span>
             <span className="hidden md:inline text-gray-600">•</span>
+            <span>Accepts GPC</span>
+            <span className="hidden md:inline text-gray-600">•</span>
             <span>Based in Chicago</span>
           </div>
         </div>
@@ -133,7 +135,7 @@ function App() {
           <div className="text-center mb-20">
             <h2 className="text-4xl font-bold mb-4">What We Deliver</h2>
             <p className="text-sm text-gray-400 max-w-2xl mx-auto leading-relaxed">
-              We handle vendor sourcing, quoting, and delivery logistics—so your team can focus on mission execution.
+              We handle vendor sourcing, quoting, and delivery logistics so your team can focus on operations.
             </p>
           </div>
 
@@ -148,7 +150,7 @@ function App() {
               </div>
               <h3 className="text-lg font-semibold mb-3">MRO Supplies</h3>
               <p className="text-sm text-gray-400 leading-relaxed">
-                Hand tools, fasteners, HVAC components, electrical supplies, plumbing parts, janitorial products, and industrial equipment—sourced from authorized distributors, quoted to your specs.
+                Hand tools, fasteners, HVAC components, electrical supplies, plumbing parts, janitorial products, and industrial equipment. Sourced from authorized distributors, quoted to your specs.
               </p>
             </div>
 
@@ -201,48 +203,67 @@ function App() {
         </div>
       </section>
 
-      {/* Execution Model Strip */}
-      <section className="py-20 bg-axiom-dark border-y border-white/5">
+      {/* Execution Model Section */}
+      <section className="py-24 bg-axiom-dark">
         <div className="max-w-6xl mx-auto px-6">
-          <h3 className="text-center text-lg font-semibold mb-12">Our Execution Model</h3>
+          <div className="bg-axiom-gray border border-white/5 rounded-2xl p-10 md:p-14">
+            <h3 className="text-center text-xl font-semibold mb-14">Our Execution Model</h3>
 
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-0">
-            {/* Source */}
-            <div className="text-center px-6">
-              <div className="text-axiom-accent font-semibold mb-2">Source</div>
-              <div className="text-xs text-gray-500">Authorized distributor<br />sourcing</div>
-            </div>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-6">
+              {/* Source */}
+              <div className="text-center">
+                <div className="w-12 h-12 mx-auto mb-4 bg-axiom-accent/10 rounded-xl flex items-center justify-center">
+                  <svg className="w-6 h-6 text-axiom-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
+                  </svg>
+                </div>
+                <div className="text-axiom-accent font-semibold mb-2">Source</div>
+                <div className="text-xs text-gray-500 leading-relaxed">Identify products through our authorized distributor network</div>
+              </div>
 
-            <div className="hidden md:block text-gray-600 text-2xl">→</div>
+              {/* Quote */}
+              <div className="text-center">
+                <div className="w-12 h-12 mx-auto mb-4 bg-axiom-accent/10 rounded-xl flex items-center justify-center">
+                  <svg className="w-6 h-6 text-axiom-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div className="text-axiom-accent font-semibold mb-2">Quote</div>
+                <div className="text-xs text-gray-500 leading-relaxed">Provide competitive pricing with rapid turnaround times</div>
+              </div>
 
-            {/* Quote */}
-            <div className="text-center px-6">
-              <div className="text-axiom-accent font-semibold mb-2">Quote</div>
-              <div className="text-xs text-gray-500">Rapid quoting</div>
-            </div>
+              {/* Fulfill */}
+              <div className="text-center">
+                <div className="w-12 h-12 mx-auto mb-4 bg-axiom-accent/10 rounded-xl flex items-center justify-center">
+                  <svg className="w-6 h-6 text-axiom-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                  </svg>
+                </div>
+                <div className="text-axiom-accent font-semibold mb-2">Fulfill</div>
+                <div className="text-xs text-gray-500 leading-relaxed">Process orders and coordinate with vendors for inventory</div>
+              </div>
 
-            <div className="hidden md:block text-gray-600 text-2xl">→</div>
+              {/* Deliver */}
+              <div className="text-center">
+                <div className="w-12 h-12 mx-auto mb-4 bg-axiom-accent/10 rounded-xl flex items-center justify-center">
+                  <svg className="w-6 h-6 text-axiom-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                  </svg>
+                </div>
+                <div className="text-axiom-accent font-semibold mb-2">Deliver</div>
+                <div className="text-xs text-gray-500 leading-relaxed">Ship to your location with tracking and delivery confirmation</div>
+              </div>
 
-            {/* Fulfill */}
-            <div className="text-center px-6">
-              <div className="text-axiom-accent font-semibold mb-2">Fulfill</div>
-              <div className="text-xs text-gray-500">Order tracking<br />and logistics</div>
-            </div>
-
-            <div className="hidden md:block text-gray-600 text-2xl">→</div>
-
-            {/* Deliver */}
-            <div className="text-center px-6">
-              <div className="text-axiom-accent font-semibold mb-2">Deliver</div>
-              <div className="text-xs text-gray-500">On-time delivery</div>
-            </div>
-
-            <div className="hidden md:block text-gray-600 text-2xl">→</div>
-
-            {/* Report */}
-            <div className="text-center px-6">
-              <div className="text-axiom-accent font-semibold mb-2">Report</div>
-              <div className="text-xs text-gray-500">Post-delivery<br />reporting</div>
+              {/* Report */}
+              <div className="text-center col-span-2 md:col-span-1">
+                <div className="w-12 h-12 mx-auto mb-4 bg-axiom-accent/10 rounded-xl flex items-center justify-center">
+                  <svg className="w-6 h-6 text-axiom-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                  </svg>
+                </div>
+                <div className="text-axiom-accent font-semibold mb-2">Report</div>
+                <div className="text-xs text-gray-500 leading-relaxed">Provide documentation and post-delivery reporting</div>
+              </div>
             </div>
           </div>
         </div>
@@ -261,7 +282,7 @@ function App() {
                 Built for Federal<br />Procurement.
               </h2>
               <p className="text-sm text-gray-400 mb-10 leading-relaxed">
-                Axiom Group, Inc. is a Service-Disabled Veteran-Owned Small Business providing procurement and supply fulfillment for federal agencies.
+                Axiom Group is a Service-Disabled Veteran-Owned Small Business providing procurement and fulfillment for federal agencies.
               </p>
 
               {/* Core Capabilities */}
@@ -292,7 +313,7 @@ function App() {
               </div>
 
               {/* Differentiators */}
-              <div className="mb-10">
+              <div>
                 <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">Differentiators</h4>
                 <ul className="space-y-2 text-sm text-gray-300">
                   <li className="flex items-center gap-2">
@@ -317,48 +338,41 @@ function App() {
                   </li>
                 </ul>
               </div>
-
-              {/* Corporate Data */}
-              <div>
-                <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">Corporate Data</h4>
-                <div className="grid grid-cols-2 gap-4 text-sm">
-                  <div>
-                    <span className="text-gray-500">UEI:</span>
-                    <span className="text-white ml-2">XSVAANVXZGM1</span>
-                  </div>
-                  <div>
-                    <span className="text-gray-500">CAGE:</span>
-                    <span className="text-white ml-2">181C2</span>
-                  </div>
-                  <div>
-                    <span className="text-gray-500">HQ:</span>
-                    <span className="text-white ml-2">Chicago, IL</span>
-                  </div>
-                  <div>
-                    <span className="text-gray-500">Delivery:</span>
-                    <span className="text-white ml-2">CONUS</span>
-                  </div>
-                </div>
-              </div>
             </div>
 
-            {/* Right Column - SDVOSB Card */}
-            <div className="relative">
-              <div className="aspect-square bg-axiom-dark rounded-2xl border border-white/5 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-24 h-24 mx-auto mb-6 bg-axiom-accent/10 rounded-2xl flex items-center justify-center">
-                    <svg className="w-12 h-12 text-axiom-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
-                    </svg>
+            {/* Right Column - Corporate Data Panel */}
+            <div>
+              <div className="bg-axiom-dark border border-white/5 rounded-2xl p-8 h-full">
+                <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-8">Corporate Data</h4>
+
+                <div className="space-y-6">
+                  <div className="flex justify-between items-center py-4 border-b border-white/5">
+                    <span className="text-sm text-gray-400">UEI</span>
+                    <span className="text-sm text-white font-medium">XSVAANVXZGM1</span>
                   </div>
-                  <h3 className="text-2xl font-bold mb-2">SDVOSB</h3>
-                  <p className="text-sm text-gray-500">Service-Disabled Veteran-Owned<br />Small Business</p>
+                  <div className="flex justify-between items-center py-4 border-b border-white/5">
+                    <span className="text-sm text-gray-400">CAGE Code</span>
+                    <span className="text-sm text-white font-medium">181C2</span>
+                  </div>
+                  <div className="flex justify-between items-center py-4 border-b border-white/5">
+                    <span className="text-sm text-gray-400">Headquarters</span>
+                    <span className="text-sm text-white font-medium">Chicago, IL</span>
+                  </div>
+                  <div className="flex justify-between items-center py-4 border-b border-white/5">
+                    <span className="text-sm text-gray-400">Delivery Area</span>
+                    <span className="text-sm text-white font-medium">CONUS</span>
+                  </div>
+                  <div className="flex justify-between items-center py-4">
+                    <span className="text-sm text-gray-400">Payment</span>
+                    <span className="text-sm text-white font-medium">Accepts GPC</span>
+                  </div>
+                </div>
+
+                <div className="mt-10 pt-8 border-t border-white/5">
+                  <div className="text-xs text-gray-500 uppercase tracking-wider mb-3">Business Classification</div>
+                  <div className="text-sm text-white">Service-Disabled Veteran-Owned Small Business (SDVOSB)</div>
                 </div>
               </div>
-
-              {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-axiom-accent/5 rounded-2xl -z-10"></div>
-              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-axiom-accent/5 rounded-2xl -z-10"></div>
             </div>
           </div>
 
@@ -393,23 +407,23 @@ function App() {
             </div>
           </div>
 
-          {/* Relevant Experience */}
+          {/* Relevant Experience - Metrics Layout */}
           <div className="mt-8 p-8 bg-axiom-dark border border-white/5 rounded-2xl">
-            <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-6">Relevant Experience</h4>
-            <ul className="space-y-3 text-sm text-gray-300">
-              <li className="flex items-start gap-3">
-                <span className="w-1 h-1 bg-axiom-accent rounded-full mt-2"></span>
-                Team experience supporting DoD, DHS, VA procurement programs
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-1 h-1 bg-axiom-accent rounded-full mt-2"></span>
-                Commercial distributor relationships across MRO and IT categories
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-1 h-1 bg-axiom-accent rounded-full mt-2"></span>
-                Fulfillment and logistics experience across multi-site operations
-              </li>
-            </ul>
+            <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-8">Relevant Experience</h4>
+            <div className="grid md:grid-cols-3 gap-8 text-center">
+              <div>
+                <div className="text-4xl font-bold text-white mb-2">8</div>
+                <div className="text-sm text-gray-400">Federal agencies served</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-white mb-2">7</div>
+                <div className="text-sm text-gray-400">Primary NAICS codes</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-white mb-2">100%</div>
+                <div className="text-sm text-gray-400">SOW compliant</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -420,7 +434,7 @@ function App() {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Let's Work Together</h2>
             <p className="text-sm text-gray-400 max-w-2xl mx-auto leading-relaxed">
-              Whether you're a contracting officer, prime contractor, or agency buyer—we'd like to hear from you.
+              Whether you're a contracting officer, prime contractor, or agency buyer, we'd like to hear from you.
             </p>
           </div>
 
