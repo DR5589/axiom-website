@@ -10,9 +10,22 @@ function App() {
   })
   const [formSubmitted, setFormSubmitted] = useState(false)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    setFormSubmitted(true)
+    try {
+      const response = await fetch('https://formspree.io/f/mzddveoy', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+      if (response.ok) {
+        setFormSubmitted(true)
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
+    }
   }
 
   const handleChange = (e) => {
