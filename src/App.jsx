@@ -41,7 +41,7 @@ function App() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-axiom-dark/90 backdrop-blur-sm border-b border-white/5">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
           <a href="#" className="flex items-center">
-            <img src="/logo-white.svg" alt="Axiom Group" className="h-16" />
+            <img src="/logo-white.svg" alt="Axiom Group" style={{height: '128px'}} />
           </a>
 
           {/* Desktop Nav */}
