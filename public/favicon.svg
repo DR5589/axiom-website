@@ -1,5 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#0a0a0a"/>
-  <text x="16" y="22" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">A</text>
-  <circle cx="24" cy="8" r="3" fill="#3b82f6"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1500 1000" style="enable-background:new 0 0 1500 1000;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#021428;}
+</style>
+<polygon class="st0" points="887.96,722.88 977.23,722.88 936.7,643.14 749.96,276.81 563.21,643.14 522.68,722.88 611.95,722.88 
+	694.75,645.35 805.16,645.35 "/>
 </svg>
