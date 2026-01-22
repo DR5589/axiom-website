@@ -40,8 +40,8 @@ function App() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-axiom-dark/90 backdrop-blur-sm border-b border-white/5">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-          <a href="#" className="flex items-center">
-            <img src="/logo-white.svg" alt="Axiom Group" className="h-10" />
+          <a href="#" className="text-xl font-bold tracking-tight">
+            AXIOM<span className="text-axiom-accent">.</span>
           </a>
 
           {/* Desktop Nav */}
@@ -547,22 +547,17 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-axiom-dark border-t border-white/5">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-            <div className="flex flex-col items-center md:items-start gap-4">
-              <img src="/logo-white.svg" alt="Axiom Group" className="h-8" />
-              <div className="text-xs text-gray-500">
-                © 2026 Axiom Group, Inc. All rights reserved.
-              </div>
-            </div>
-            <div className="flex items-center gap-6 text-xs text-gray-500">
-              <span>SDVOSB</span>
-              <span>•</span>
-              <span>UEI: XSVAANVXZGM1</span>
-              <span>•</span>
-              <span>CAGE: 181C2</span>
-            </div>
+      <footer className="py-8 bg-axiom-dark border-t border-white/5">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="text-xs text-gray-500">
+            © 2026 Axiom Group, Inc. All rights reserved.
+          </div>
+          <div className="flex items-center gap-6 text-xs text-gray-500">
+            <span>SDVOSB</span>
+            <span>•</span>
+            <span>UEI: XSVAANVXZGM1</span>
+            <span>•</span>
+            <span>CAGE: 181C2</span>
           </div>
         </div>
       </footer>
