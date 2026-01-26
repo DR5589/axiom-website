@@ -394,28 +394,28 @@ function App() {
             <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-6">Primary NAICS Codes</h4>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               <div className="text-sm">
-                <span className="text-axiom-accent font-mono">423710</span>
-                <span className="text-gray-400 ml-2">Hardware Merchant Wholesalers</span>
+                <span className="text-axiom-accent font-mono">333413</span>
+                <span className="text-gray-400 ml-2">Air Purification Equipment Manufacturing</span>
               </div>
               <div className="text-sm">
-                <span className="text-axiom-accent font-mono">423430</span>
-                <span className="text-gray-400 ml-2">Computer Equipment Merchant Wholesalers</span>
+                <span className="text-axiom-accent font-mono">339112</span>
+                <span className="text-gray-400 ml-2">Surgical & Medical Instrument Manufacturing</span>
               </div>
               <div className="text-sm">
-                <span className="text-axiom-accent font-mono">423840</span>
-                <span className="text-gray-400 ml-2">Industrial Supplies Merchant Wholesalers</span>
+                <span className="text-axiom-accent font-mono">339113</span>
+                <span className="text-gray-400 ml-2">Surgical Appliance & Supplies Manufacturing</span>
               </div>
               <div className="text-sm">
-                <span className="text-axiom-accent font-mono">332510</span>
-                <span className="text-gray-400 ml-2">Hardware Manufacturing</span>
+                <span className="text-axiom-accent font-mono">423450</span>
+                <span className="text-gray-400 ml-2">Medical Equipment Merchant Wholesalers</span>
               </div>
               <div className="text-sm">
-                <span className="text-axiom-accent font-mono">423610</span>
-                <span className="text-gray-400 ml-2">Electrical Equipment Merchant Wholesalers</span>
+                <span className="text-axiom-accent font-mono">423740</span>
+                <span className="text-gray-400 ml-2">HVAC Equipment Merchant Wholesalers</span>
               </div>
               <div className="text-sm">
-                <span className="text-axiom-accent font-mono">423490</span>
-                <span className="text-gray-400 ml-2">Other Professional Equipment Wholesalers</span>
+                <span className="text-axiom-accent font-mono">423990</span>
+                <span className="text-gray-400 ml-2">Durable Goods Merchant Wholesalers</span>
               </div>
             </div>
           </div>
@@ -429,7 +429,7 @@ function App() {
                 <div className="text-sm text-gray-400">Federal agencies served</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-white mb-2">7</div>
+                <div className="text-4xl font-bold text-white mb-2">6</div>
                 <div className="text-sm text-gray-400">Primary NAICS codes</div>
               </div>
               <div>
