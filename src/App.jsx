@@ -90,17 +90,17 @@ function App() {
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           {/* SDVOSB Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full mb-8">
-            <span className="text-xs text-gray-400">Service-Disabled Veteran-Owned Small Business</span>
+          <div className="flex justify-center mb-8">
+            <img src="/sdvosb-badge.svg" alt="SDVOSB Certified" style={{width: '110px', height: '110px'}} />
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight">
-            Air filtration. IT. Medical.<br />
-            <span className="text-gray-400">For government buyers.</span>
+            Government procurement,<br />
+            <span className="text-gray-400">without the friction.</span>
           </h1>
 
           <p className="text-base text-gray-400 max-w-xl mx-auto mb-12 leading-relaxed">
-            Axiom Group is an SDVOSB authorized distributor serving federal, state, and local government agencies. Premium brand-name and equivalent products at competitive pricing — sourced, quoted, and delivered.
+            Sourced, quoted, and delivered on contract. Axiom Group is an SDVOSB authorized distributor serving federal, state, and local government agencies nationwide.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
