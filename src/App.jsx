@@ -89,9 +89,9 @@ function App() {
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-axiom-accent/10 rounded-full blur-[128px]"></div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          {/* SDVOSB Badge */}
-          <div className="flex justify-center mb-8">
-            <img src="/sdvosb-badge.svg" alt="SDVOSB Certified" style={{width: '110px', height: '110px'}} />
+          {/* SDVOSB text badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full mb-8">
+            <span className="text-xs text-gray-400">Service-Disabled Veteran-Owned Small Business</span>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight">
