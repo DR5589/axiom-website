@@ -152,37 +152,23 @@ function App() {
           <div className="text-center mb-20">
             <h2 className="text-4xl font-bold mb-4">What We Deliver</h2>
             <p className="text-sm text-gray-400 max-w-2xl mx-auto leading-relaxed">
-              Three core verticals serving federal, state, and local government buyers nationwide.
+              Four core verticals serving federal, state, and local government buyers nationwide.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* HVAC & Air Filtration */}
-            <div className="p-8 bg-axiom-dark border border-white/5 rounded-2xl hover:border-axiom-accent/30 transition-colors group">
-              <div className="w-12 h-12 bg-axiom-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-axiom-accent/20 transition-colors">
-                <svg className="w-6 h-6 text-axiom-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold mb-3">HVAC &amp; Air Filtration</h3>
-              <p className="text-sm text-gray-400 leading-relaxed mb-4">
-                Pleated, box, bag, and HEPA filters for commercial and institutional HVAC systems. MERV 7-16, ASHRAE 52.2 tested, UL 900 certified.
-              </p>
-              <p className="text-xs text-gray-500">Nordic Pure • AAF Flanders • Koch Filter</p>
-            </div>
-
-            {/* IT & Hardware */}
+            {/* IT & Cybersecurity */}
             <div className="p-8 bg-axiom-dark border border-white/5 rounded-2xl hover:border-axiom-accent/30 transition-colors group">
               <div className="w-12 h-12 bg-axiom-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-axiom-accent/20 transition-colors">
                 <svg className="w-6 h-6 text-axiom-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold mb-3">IT &amp; Hardware</h3>
+              <h3 className="text-lg font-semibold mb-3">IT &amp; Cybersecurity</h3>
               <p className="text-sm text-gray-400 leading-relaxed mb-4">
                 Workstations, monitors, servers, networking, and cybersecurity. TAA-compliant sourcing through authorized federal distribution channels.
               </p>
-              <p className="text-xs text-gray-500">Dell • Cisco • Palo Alto • Splunk</p>
+              <p className="text-xs text-gray-500">Dell • Cisco • Palo Alto • Fortinet • Splunk</p>
             </div>
 
             {/* Medical */}
@@ -200,7 +186,21 @@ function App() {
               <p className="text-xs text-gray-500">Building authorized distributor partnerships</p>
             </div>
 
-            {/* Safety & PPE */}
+            {/* HVAC & Air Filtration */}
+            <div className="p-8 bg-axiom-dark border border-white/5 rounded-2xl hover:border-axiom-accent/30 transition-colors group">
+              <div className="w-12 h-12 bg-axiom-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-axiom-accent/20 transition-colors">
+                <svg className="w-6 h-6 text-axiom-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold mb-3">HVAC &amp; Air Filtration</h3>
+              <p className="text-sm text-gray-400 leading-relaxed mb-4">
+                Pleated, box, bag, and HEPA filters for commercial and institutional HVAC systems. MERV 7-16, ASHRAE 52.2 tested, UL 900 certified.
+              </p>
+              <p className="text-xs text-gray-500">Nordic Pure • AAF Flanders • Koch Filter</p>
+            </div>
+
+            {/* Safety & Fall Protection */}
             <div className="p-8 bg-axiom-dark border border-white/5 rounded-2xl hover:border-axiom-accent/30 transition-colors group">
               <div className="w-12 h-12 bg-axiom-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-axiom-accent/20 transition-colors">
                 <svg className="w-6 h-6 text-axiom-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -272,7 +272,7 @@ function App() {
           {/* IT Partners */}
           <div className="mb-12">
             <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-6 text-center">IT &amp; Cybersecurity</h4>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
               <div className="p-6 bg-axiom-gray border border-white/5 rounded-xl text-center hover:border-axiom-accent/30 transition-colors">
                 <div className="text-xl font-bold text-white mb-1">Dell</div>
                 <p className="text-xs text-gray-500">Workstations, servers, monitors</p>
@@ -284,6 +284,10 @@ function App() {
               <div className="p-6 bg-axiom-gray border border-white/5 rounded-xl text-center hover:border-axiom-accent/30 transition-colors">
                 <div className="text-xl font-bold text-white mb-1">Palo Alto</div>
                 <p className="text-xs text-gray-500">Next-gen firewalls, Panorama</p>
+              </div>
+              <div className="p-6 bg-axiom-gray border border-white/5 rounded-xl text-center hover:border-axiom-accent/30 transition-colors">
+                <div className="text-xl font-bold text-white mb-1">Fortinet</div>
+                <p className="text-xs text-gray-500">FortiGate firewalls, secure SD-WAN</p>
               </div>
               <div className="p-6 bg-axiom-gray border border-white/5 rounded-xl text-center hover:border-axiom-accent/30 transition-colors">
                 <div className="text-xl font-bold text-white mb-1">Splunk</div>
@@ -484,31 +488,153 @@ function App() {
 
           {/* NAICS Codes */}
           <div className="mt-20 p-8 bg-axiom-gray border border-white/5 rounded-2xl">
-            <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-6">Primary NAICS Codes</h4>
+            <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-6">NAICS Codes</h4>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <div className="text-sm">
-                <span className="text-axiom-accent font-mono">423740</span>
-                <span className="text-gray-400 ml-2">HVAC Equipment Wholesalers</span>
-              </div>
               <div className="text-sm">
                 <span className="text-axiom-accent font-mono">423430</span>
                 <span className="text-gray-400 ml-2">Computer &amp; Software Wholesalers</span>
               </div>
               <div className="text-sm">
-                <span className="text-axiom-accent font-mono">423450</span>
-                <span className="text-gray-400 ml-2">Medical Equipment Wholesalers</span>
+                <span className="text-axiom-accent font-mono">423420</span>
+                <span className="text-gray-400 ml-2">Office Equipment Wholesalers</span>
               </div>
               <div className="text-sm">
                 <span className="text-axiom-accent font-mono">423610</span>
-                <span className="text-gray-400 ml-2">Electrical Apparatus Wholesalers</span>
+                <span className="text-gray-400 ml-2">Electrical Apparatus &amp; Wiring Wholesalers</span>
+              </div>
+              <div className="text-sm">
+                <span className="text-axiom-accent font-mono">423690</span>
+                <span className="text-gray-400 ml-2">Other Electronic Parts &amp; Equipment Wholesalers</span>
+              </div>
+              <div className="text-sm">
+                <span className="text-axiom-accent font-mono">423450</span>
+                <span className="text-gray-400 ml-2">Medical &amp; Hospital Equipment Wholesalers</span>
+              </div>
+              <div className="text-sm">
+                <span className="text-axiom-accent font-mono">424210</span>
+                <span className="text-gray-400 ml-2">Drugs &amp; Druggists' Sundries Wholesalers</span>
+              </div>
+              <div className="text-sm">
+                <span className="text-axiom-accent font-mono">423730</span>
+                <span className="text-gray-400 ml-2">Warm Air Heating &amp; A/C Equipment Wholesalers</span>
+              </div>
+              <div className="text-sm">
+                <span className="text-axiom-accent font-mono">423740</span>
+                <span className="text-gray-400 ml-2">Refrigeration Equipment &amp; Supplies Wholesalers</span>
+              </div>
+              <div className="text-sm">
+                <span className="text-axiom-accent font-mono">423720</span>
+                <span className="text-gray-400 ml-2">Plumbing &amp; Heating Equipment Wholesalers</span>
               </div>
               <div className="text-sm">
                 <span className="text-axiom-accent font-mono">423840</span>
                 <span className="text-gray-400 ml-2">Industrial Supplies Wholesalers</span>
               </div>
               <div className="text-sm">
+                <span className="text-axiom-accent font-mono">423830</span>
+                <span className="text-gray-400 ml-2">Industrial Machinery &amp; Equipment Wholesalers</span>
+              </div>
+              <div className="text-sm">
+                <span className="text-axiom-accent font-mono">423710</span>
+                <span className="text-gray-400 ml-2">Hardware Wholesalers</span>
+              </div>
+              <div className="text-sm">
+                <span className="text-axiom-accent font-mono">423210</span>
+                <span className="text-gray-400 ml-2">Furniture Wholesalers</span>
+              </div>
+              <div className="text-sm">
+                <span className="text-axiom-accent font-mono">423220</span>
+                <span className="text-gray-400 ml-2">Home Furnishing Wholesalers</span>
+              </div>
+              <div className="text-sm">
+                <span className="text-axiom-accent font-mono">423440</span>
+                <span className="text-gray-400 ml-2">Other Commercial Equipment Wholesalers</span>
+              </div>
+              <div className="text-sm">
+                <span className="text-axiom-accent font-mono">423620</span>
+                <span className="text-gray-400 ml-2">Household Appliances &amp; Electronics Wholesalers</span>
+              </div>
+              <div className="text-sm">
+                <span className="text-axiom-accent font-mono">423850</span>
+                <span className="text-gray-400 ml-2">Service Establishment Equipment Wholesalers</span>
+              </div>
+              <div className="text-sm">
+                <span className="text-axiom-accent font-mono">424130</span>
+                <span className="text-gray-400 ml-2">Industrial &amp; Personal Service Paper Wholesalers</span>
+              </div>
+              <div className="text-sm">
+                <span className="text-axiom-accent font-mono">424690</span>
+                <span className="text-gray-400 ml-2">Other Chemical &amp; Allied Products Wholesalers</span>
+              </div>
+              <div className="text-sm">
+                <span className="text-axiom-accent font-mono">424120</span>
+                <span className="text-gray-400 ml-2">Stationery &amp; Office Supplies Wholesalers</span>
+              </div>
+              <div className="text-sm">
+                <span className="text-axiom-accent font-mono">423910</span>
+                <span className="text-gray-400 ml-2">Sporting &amp; Recreational Goods Wholesalers</span>
+              </div>
+              <div className="text-sm">
                 <span className="text-axiom-accent font-mono">423990</span>
                 <span className="text-gray-400 ml-2">Other Durable Goods Wholesalers</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Authorizations & Certifications */}
+          <div className="mt-8 p-8 bg-axiom-gray border border-white/5 rounded-2xl">
+            <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-6">Authorizations &amp; Certifications</h4>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-gray-300">
+              <div className="flex items-start gap-2">
+                <span className="w-1 h-1 mt-2 bg-axiom-accent rounded-full flex-shrink-0"></span>
+                SBA-Certified Service-Disabled Veteran-Owned Small Business (SDVOSB)
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="w-1 h-1 mt-2 bg-axiom-accent rounded-full flex-shrink-0"></span>
+                VA Vendor Acquisition Portal — approved
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="w-1 h-1 mt-2 bg-axiom-accent rounded-full flex-shrink-0"></span>
+                Cisco U.S. Federal Authorization — active
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="w-1 h-1 mt-2 bg-axiom-accent rounded-full flex-shrink-0"></span>
+                Splunk Partnerverse — authorized to transact
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="w-1 h-1 mt-2 bg-axiom-accent rounded-full flex-shrink-0"></span>
+                SAM.gov registered — CAGE 181C2, UEI XSVAANVXZGM1
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="w-1 h-1 mt-2 bg-axiom-accent rounded-full flex-shrink-0"></span>
+                Authorized distribution across all four core verticals
+              </div>
+            </div>
+          </div>
+
+          {/* Cooperative Vehicles & Awards */}
+          <div className="mt-8 p-8 bg-axiom-gray border border-white/5 rounded-2xl">
+            <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-6">Cooperative Contract Vehicles &amp; Awards</h4>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-gray-300">
+              <div className="flex items-start gap-2">
+                <span className="w-1 h-1 mt-2 bg-axiom-accent rounded-full flex-shrink-0"></span>
+                EPIC6 Cooperative — HVAC (RFP 29.26), executed
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="w-1 h-1 mt-2 bg-axiom-accent rounded-full flex-shrink-0"></span>
+                EPIC6 Cooperative — Office Supplies, Furniture &amp; Services (RFP 15.26), executed
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="w-1 h-1 mt-2 bg-axiom-accent rounded-full flex-shrink-0"></span>
+                EPIC6 Cooperative — Computer HW/SW, Services &amp; Supplies (RFP 22.26), awarded
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="w-1 h-1 mt-2 bg-axiom-accent rounded-full flex-shrink-0"></span>
+                Goodbuy ESC-2 — HVAC Filtration Cooperative, awarded
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="w-1 h-1 mt-2 bg-axiom-accent rounded-full flex-shrink-0"></span>
+                City of Houston Airport System — air filtration, awarded &amp; delivered
               </div>
             </div>
           </div>
