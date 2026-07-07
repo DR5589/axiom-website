@@ -135,9 +135,9 @@ function App() {
             <span className="hidden md:inline text-gray-600">•</span>
             <span className="font-medium text-white">Sole-Source Eligible to $5M</span>
             <span className="hidden md:inline text-gray-600">•</span>
-            <span><span className="text-gray-500">UEI:</span> XSVAANVXZGM1</span>
+            <span className="font-mono"><span className="text-gray-500">UEI:</span> XSVAANVXZGM1</span>
             <span className="hidden md:inline text-gray-600">•</span>
-            <span><span className="text-gray-500">CAGE:</span> 181C2</span>
+            <span className="font-mono"><span className="text-gray-500">CAGE:</span> 181C2</span>
             <span className="hidden md:inline text-gray-600">•</span>
             <span>SAM Registered</span>
             <span className="hidden md:inline text-gray-600">•</span>
@@ -215,23 +215,38 @@ function App() {
             </div>
           </div>
 
-          {/* Data Panel */}
-          <div className="mt-20 grid md:grid-cols-4 gap-6">
-            <div className="p-6 bg-axiom-dark border border-white/5 rounded-xl text-center">
-              <div className="text-2xl font-bold text-white mb-2">10+</div>
-              <div className="text-xs text-gray-500">Government agencies served</div>
+          {/* Awards Ledger */}
+          <div className="mt-20 bg-axiom-dark border border-white/5 rounded-2xl overflow-hidden">
+            <div className="px-6 py-4 border-b border-white/5 flex justify-between items-center">
+              <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Contract Vehicles &amp; Awards</h4>
+              <span className="text-xs text-gray-600 font-mono hidden md:inline">Verifiable · References on request</span>
             </div>
-            <div className="p-6 bg-axiom-dark border border-white/5 rounded-xl text-center">
-              <div className="text-2xl font-bold text-white mb-2">8+</div>
-              <div className="text-xs text-gray-500">Active procurement portals</div>
-            </div>
-            <div className="p-6 bg-axiom-dark border border-white/5 rounded-xl text-center">
-              <div className="text-2xl font-bold text-white mb-2">$5M</div>
-              <div className="text-xs text-gray-500">SDVOSB sole-source authority</div>
-            </div>
-            <div className="p-6 bg-axiom-dark border border-white/5 rounded-xl text-center">
-              <div className="text-2xl font-bold text-white mb-2">CONUS</div>
-              <div className="text-xs text-gray-500">Nationwide delivery</div>
+            <div className="divide-y divide-white/5">
+              <div className="px-6 py-4 flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
+                <span className="font-mono text-xs text-gray-500 md:w-32 flex-shrink-0">RFP 29.26</span>
+                <span className="text-sm text-white flex-grow">EPIC6 Cooperative — HVAC <span className="text-gray-500">· 5-year vehicle</span></span>
+                <span className="font-mono text-xs font-semibold tracking-widest text-emerald-400 border border-emerald-400/40 rounded px-2.5 py-1 self-start md:self-auto">FULLY EXECUTED</span>
+              </div>
+              <div className="px-6 py-4 flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
+                <span className="font-mono text-xs text-gray-500 md:w-32 flex-shrink-0">RFP 15.26</span>
+                <span className="text-sm text-white flex-grow">EPIC6 Cooperative — Office Supplies, Furniture &amp; Services</span>
+                <span className="font-mono text-xs font-semibold tracking-widest text-emerald-400 border border-emerald-400/40 rounded px-2.5 py-1 self-start md:self-auto">FULLY EXECUTED</span>
+              </div>
+              <div className="px-6 py-4 flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
+                <span className="font-mono text-xs text-gray-500 md:w-32 flex-shrink-0">RFP 22.26</span>
+                <span className="text-sm text-white flex-grow">EPIC6 Cooperative — Computer HW/SW, Services &amp; Supplies</span>
+                <span className="font-mono text-xs font-semibold tracking-widest text-axiom-accent border border-axiom-accent/40 rounded px-2.5 py-1 self-start md:self-auto">AWARDED</span>
+              </div>
+              <div className="px-6 py-4 flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
+                <span className="font-mono text-xs text-gray-500 md:w-32 flex-shrink-0">ESC-2</span>
+                <span className="text-sm text-white flex-grow">Goodbuy Cooperative — HVAC Filtration</span>
+                <span className="font-mono text-xs font-semibold tracking-widest text-axiom-accent border border-axiom-accent/40 rounded px-2.5 py-1 self-start md:self-auto">AWARDED</span>
+              </div>
+              <div className="px-6 py-4 flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
+                <span className="font-mono text-xs text-gray-500 md:w-32 flex-shrink-0">City of Houston</span>
+                <span className="text-sm text-white flex-grow">Houston Airport System — Air Filtration <span className="text-gray-500">· 18 line items, on schedule</span></span>
+                <span className="font-mono text-xs font-semibold tracking-widest text-emerald-400 border border-emerald-400/40 rounded px-2.5 py-1 self-start md:self-auto">DELIVERED</span>
+              </div>
             </div>
           </div>
         </div>
@@ -454,11 +469,11 @@ function App() {
                 <div className="space-y-6">
                   <div className="flex justify-between items-center py-4 border-b border-white/5">
                     <span className="text-sm text-gray-400">UEI</span>
-                    <span className="text-sm text-white font-medium">XSVAANVXZGM1</span>
+                    <span className="text-sm text-white font-medium font-mono">XSVAANVXZGM1</span>
                   </div>
                   <div className="flex justify-between items-center py-4 border-b border-white/5">
                     <span className="text-sm text-gray-400">CAGE Code</span>
-                    <span className="text-sm text-white font-medium">181C2</span>
+                    <span className="text-sm text-white font-medium font-mono">181C2</span>
                   </div>
                   <div className="flex justify-between items-center py-4 border-b border-white/5">
                     <span className="text-sm text-gray-400">Headquarters</span>
@@ -778,9 +793,9 @@ function App() {
           <div className="flex items-center gap-6 text-xs text-gray-500">
             <span>SDVOSB</span>
             <span>•</span>
-            <span>UEI: XSVAANVXZGM1</span>
+            <span className="font-mono">UEI: XSVAANVXZGM1</span>
             <span>•</span>
-            <span>CAGE: 181C2</span>
+            <span className="font-mono">CAGE: 181C2</span>
           </div>
         </div>
       </footer>
