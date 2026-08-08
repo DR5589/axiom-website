@@ -106,7 +106,7 @@ function App() {
             Axiom Group is a Service-Disabled Veteran-Owned reseller. Manufacturers make it — we find the bid, win the contract, handle the compliance, and coordinate drop-ship delivery. No inventory. No channel conflict. One accountable vendor.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#contact"
               className="px-8 py-4 bg-axiom-accent text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors"
@@ -119,11 +119,6 @@ function App() {
             >
               Partner With Us — Suppliers
             </a>
-          </div>
-
-          {/* Official SBA SDVOSB badge */}
-          <div className="flex justify-center">
-            <img src="/sba-sdvosb-badge.png" alt="SBA Certified Service-Disabled Veteran-Owned Small Business" className="h-28 w-auto rounded-md" />
           </div>
         </div>
 
@@ -921,6 +916,10 @@ function App() {
 
       {/* Footer */}
       <footer className="py-8 bg-axiom-dark border-t border-white/5">
+        {/* Certification badge row — partner-program badges get added here */}
+        <div className="max-w-6xl mx-auto px-6 flex justify-center items-center gap-8 mb-8">
+          <img src="/sba-sdvosb-badge.png" alt="SBA Certified Service-Disabled Veteran-Owned Small Business" className="h-24 w-auto rounded" />
+        </div>
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-xs text-gray-500">
             © 2026 Axiom Group, Inc. All rights reserved.
