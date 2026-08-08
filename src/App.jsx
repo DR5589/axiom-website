@@ -6,6 +6,7 @@ function App() {
     name: '',
     email: '',
     organization: '',
+    inquiryType: '',
     message: ''
   })
   const [formSubmitted, setFormSubmitted] = useState(false)
@@ -48,6 +49,7 @@ function App() {
           <div className="hidden md:flex items-center gap-8">
             <a href="#services" className="text-sm text-gray-400 hover:text-white transition-colors">Services</a>
             <a href="#partners" className="text-sm text-gray-400 hover:text-white transition-colors">Partners</a>
+            <a href="#suppliers" className="text-sm text-gray-400 hover:text-white transition-colors">For Suppliers</a>
             <a href="#about" className="text-sm text-gray-400 hover:text-white transition-colors">About</a>
             <a href="#contact" className="text-sm text-gray-400 hover:text-white transition-colors">Contact</a>
           </div>
@@ -73,6 +75,7 @@ function App() {
             <div className="px-6 py-4 flex flex-col gap-4">
               <a href="#services" className="text-gray-400 hover:text-white transition-colors" onClick={() => setMenuOpen(false)}>Services</a>
               <a href="#partners" className="text-gray-400 hover:text-white transition-colors" onClick={() => setMenuOpen(false)}>Partners</a>
+              <a href="#suppliers" className="text-gray-400 hover:text-white transition-colors" onClick={() => setMenuOpen(false)}>For Suppliers</a>
               <a href="#about" className="text-gray-400 hover:text-white transition-colors" onClick={() => setMenuOpen(false)}>About</a>
               <a href="#contact" className="text-gray-400 hover:text-white transition-colors" onClick={() => setMenuOpen(false)}>Contact</a>
             </div>
@@ -95,15 +98,15 @@ function App() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight">
-            Government procurement,<br />
-            <span className="text-gray-400">without the friction.</span>
+            We put manufacturers' products<br />
+            <span className="text-gray-400">on government contracts.</span>
           </h1>
 
-          <p className="text-base text-gray-400 max-w-xl mx-auto mb-12 leading-relaxed">
-            Sourced, quoted, and delivered on contract. Axiom Group is an SDVOSB authorized distributor serving federal, state, and local government agencies nationwide.
+          <p className="text-base text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed">
+            Axiom Group is a Service-Disabled Veteran-Owned reseller. Manufacturers make it — we find the bid, win the contract, handle the compliance, and coordinate drop-ship delivery. No inventory. No channel conflict. One accountable vendor.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <a
               href="#contact"
               className="px-8 py-4 bg-axiom-accent text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors"
@@ -111,11 +114,16 @@ function App() {
               Request Capability Statement
             </a>
             <a
-              href="#services"
+              href="#suppliers"
               className="px-8 py-4 bg-white/5 border border-white/10 font-semibold rounded-lg hover:bg-white/10 transition-colors"
             >
-              View Our Capabilities
+              Partner With Us — Suppliers
             </a>
+          </div>
+
+          {/* Official SBA SDVOSB badge */}
+          <div className="flex justify-center">
+            <img src="/sba-sdvosb-badge.png" alt="SBA Certified Service-Disabled Veteran-Owned Small Business" className="h-28 w-auto rounded-md" />
           </div>
         </div>
 
@@ -142,6 +150,30 @@ function App() {
             <span>SAM Registered</span>
             <span className="hidden md:inline text-gray-600">•</span>
             <span>Accepts GPC</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Audience Split Band */}
+      <section className="py-16 bg-axiom-dark">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-6">
+            <a href="#services" className="block p-8 bg-axiom-gray border border-white/5 rounded-2xl hover:border-axiom-accent/40 transition-colors group">
+              <div className="text-xs font-semibold text-axiom-accent uppercase tracking-wider mb-3">Government Buyers</div>
+              <h3 className="text-xl font-bold mb-3">One SDVOSB vendor. Four verticals.</h3>
+              <p className="text-sm text-gray-400 leading-relaxed mb-4">
+                Set-aside and sole-source eligible to $5M, TAA-compliant sourcing through authorized channels, 24–48 hour quotes, GPC accepted.
+              </p>
+              <span className="text-sm text-axiom-accent group-hover:underline">See what we deliver ↓</span>
+            </a>
+            <a href="#suppliers" className="block p-8 bg-axiom-gray border border-white/5 rounded-2xl hover:border-axiom-accent/40 transition-colors group">
+              <div className="text-xs font-semibold text-axiom-accent uppercase tracking-wider mb-3">Manufacturers &amp; Suppliers</div>
+              <h3 className="text-xl font-bold mb-3">Your products. Our paperwork.</h3>
+              <p className="text-sm text-gray-400 leading-relaxed mb-4">
+                We bid your catalog into federal, state, and local contracts and send you the PO — you drop-ship. No stocking, no minimums, no channel conflict.
+              </p>
+              <span className="text-sm text-axiom-accent group-hover:underline">How the partnership works ↓</span>
+            </a>
           </div>
         </div>
       </section>
@@ -269,16 +301,23 @@ function App() {
           <div className="mb-12">
             <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-6 text-center">HVAC &amp; Air Filtration</h4>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="p-8 bg-axiom-gray border border-white/5 rounded-xl text-center hover:border-axiom-accent/30 transition-colors">
-                <div className="text-2xl font-bold text-white mb-2">Nordic Pure</div>
+              <div className="p-8 bg-axiom-gray border border-white/5 rounded-xl text-center hover:border-axiom-accent/30 transition-colors group">
+                <div className="h-12 flex items-center justify-center gap-3 mb-4">
+                  <img src="/logos/nordicpure.png" alt="Nordic Pure" className="h-10 w-auto opacity-80 group-hover:opacity-100 transition-opacity" />
+                  <span className="text-xl font-bold text-white">Nordic Pure</span>
+                </div>
                 <p className="text-xs text-gray-500">Pleated panel filters MERV 7-16, custom sizes, made in Tulsa, OK</p>
               </div>
-              <div className="p-8 bg-axiom-gray border border-white/5 rounded-xl text-center hover:border-axiom-accent/30 transition-colors">
-                <div className="text-2xl font-bold text-white mb-2">AAF Flanders</div>
+              <div className="p-8 bg-axiom-gray border border-white/5 rounded-xl text-center hover:border-axiom-accent/30 transition-colors group">
+                <div className="h-12 flex items-center justify-center mb-4">
+                  <img src="/logos/aaf.png" alt="AAF Flanders" className="h-12 w-auto brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity" />
+                </div>
                 <p className="text-xs text-gray-500">VariCel rigid cell, PREpleat, DuraMAX, MicroMAX, bag and box filters</p>
               </div>
-              <div className="p-8 bg-axiom-gray border border-white/5 rounded-xl text-center hover:border-axiom-accent/30 transition-colors">
-                <div className="text-2xl font-bold text-white mb-2">Koch Filter</div>
+              <div className="p-8 bg-axiom-gray border border-white/5 rounded-xl text-center hover:border-axiom-accent/30 transition-colors group">
+                <div className="h-12 flex items-center justify-center mb-4">
+                  <span className="text-2xl font-bold text-white opacity-80 group-hover:opacity-100 transition-opacity">Koch Filter</span>
+                </div>
                 <p className="text-xs text-gray-500">MicroMAX commercial filters, MultiSak bag filters, carbon products</p>
               </div>
             </div>
@@ -288,24 +327,34 @@ function App() {
           <div className="mb-12">
             <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-6 text-center">IT &amp; Cybersecurity</h4>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-              <div className="p-6 bg-axiom-gray border border-white/5 rounded-xl text-center hover:border-axiom-accent/30 transition-colors">
-                <div className="text-xl font-bold text-white mb-1">Dell</div>
+              <div className="p-6 bg-axiom-gray border border-white/5 rounded-xl text-center hover:border-axiom-accent/30 transition-colors group">
+                <div className="h-10 flex items-center justify-center mb-3">
+                  <img src="/logos/dell.svg" alt="Dell" className="h-9 w-auto brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity" />
+                </div>
                 <p className="text-xs text-gray-500">Workstations, servers, monitors</p>
               </div>
-              <div className="p-6 bg-axiom-gray border border-white/5 rounded-xl text-center hover:border-axiom-accent/30 transition-colors">
-                <div className="text-xl font-bold text-white mb-1">Cisco</div>
+              <div className="p-6 bg-axiom-gray border border-white/5 rounded-xl text-center hover:border-axiom-accent/30 transition-colors group">
+                <div className="h-10 flex items-center justify-center mb-3">
+                  <img src="/logos/cisco.svg" alt="Cisco" className="h-8 w-auto brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity" />
+                </div>
                 <p className="text-xs text-gray-500">Networking, switches, security</p>
               </div>
-              <div className="p-6 bg-axiom-gray border border-white/5 rounded-xl text-center hover:border-axiom-accent/30 transition-colors">
-                <div className="text-xl font-bold text-white mb-1">Palo Alto</div>
+              <div className="p-6 bg-axiom-gray border border-white/5 rounded-xl text-center hover:border-axiom-accent/30 transition-colors group">
+                <div className="h-10 flex items-center justify-center mb-3">
+                  <img src="/logos/paloalto.svg" alt="Palo Alto Networks" className="h-7 w-auto brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity" />
+                </div>
                 <p className="text-xs text-gray-500">Next-gen firewalls, Panorama</p>
               </div>
-              <div className="p-6 bg-axiom-gray border border-white/5 rounded-xl text-center hover:border-axiom-accent/30 transition-colors">
-                <div className="text-xl font-bold text-white mb-1">Fortinet</div>
+              <div className="p-6 bg-axiom-gray border border-white/5 rounded-xl text-center hover:border-axiom-accent/30 transition-colors group">
+                <div className="h-10 flex items-center justify-center mb-3">
+                  <img src="/logos/fortinet.svg" alt="Fortinet" className="h-7 w-auto brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity" />
+                </div>
                 <p className="text-xs text-gray-500">FortiGate firewalls, secure SD-WAN</p>
               </div>
-              <div className="p-6 bg-axiom-gray border border-white/5 rounded-xl text-center hover:border-axiom-accent/30 transition-colors">
-                <div className="text-xl font-bold text-white mb-1">Splunk</div>
+              <div className="p-6 bg-axiom-gray border border-white/5 rounded-xl text-center hover:border-axiom-accent/30 transition-colors group">
+                <div className="h-10 flex items-center justify-center mb-3">
+                  <img src="/logos/splunk.svg" alt="Splunk" className="h-8 w-auto brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity" />
+                </div>
                 <p className="text-xs text-gray-500">SIEM, log management, analytics</p>
               </div>
             </div>
@@ -315,8 +364,10 @@ function App() {
           <div>
             <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-6 text-center">Safety &amp; Fall Protection</h4>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-              <div className="p-8 bg-axiom-gray border border-white/5 rounded-xl text-center hover:border-axiom-accent/30 transition-colors md:col-start-2">
-                <div className="text-2xl font-bold text-white mb-2">French Creek</div>
+              <div className="p-8 bg-axiom-gray border border-white/5 rounded-xl text-center hover:border-axiom-accent/30 transition-colors md:col-start-2 group">
+                <div className="h-12 flex items-center justify-center mb-4">
+                  <img src="/logos/frenchcreek.png" alt="FC Safety — French Creek" className="h-11 w-auto brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity" />
+                </div>
                 <p className="text-xs text-gray-500">Fall protection harnesses, lanyards, self-retracting lifelines, anchor systems</p>
               </div>
             </div>
@@ -324,10 +375,74 @@ function App() {
         </div>
       </section>
 
-      {/* Execution Model Section */}
-      <section className="py-24 bg-axiom-gray">
+      {/* For Suppliers Section */}
+      <section id="suppliers" className="py-32 bg-axiom-gray">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="bg-axiom-dark border border-white/5 rounded-2xl p-10 md:p-14">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-axiom-accent/10 rounded-full mb-6">
+              <span className="text-xs text-axiom-accent font-medium">For Manufacturers &amp; Suppliers</span>
+            </div>
+            <h2 className="text-4xl font-bold mb-4">A government sales channel<br />you don't have to staff.</h2>
+            <p className="text-sm text-gray-400 max-w-2xl mx-auto leading-relaxed">
+              If you make or distribute products, Axiom is a zero-overhead path into federal, state, and local contracts. We find the bids, carry the compliance, and win the business — you ship the product.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-16">
+            <div className="p-8 bg-axiom-dark border border-white/5 rounded-2xl">
+              <div className="font-mono text-xs text-axiom-accent mb-4">01</div>
+              <h3 className="text-lg font-semibold mb-3">We find and win the business</h3>
+              <p className="text-sm text-gray-400 leading-relaxed">
+                We monitor federal, state, and local solicitations daily for your product lines and write every bid ourselves. You never touch a government form.
+              </p>
+            </div>
+            <div className="p-8 bg-axiom-dark border border-white/5 rounded-2xl">
+              <div className="font-mono text-xs text-axiom-accent mb-4">02</div>
+              <h3 className="text-lg font-semibold mb-3">We win where you can't</h3>
+              <p className="text-sm text-gray-400 leading-relaxed">
+                As a certified SDVOSB, Axiom competes for set-aside contracts that manufacturers and large distributors are barred from. That's net-new revenue for your channel — not cannibalized sales.
+              </p>
+            </div>
+            <div className="p-8 bg-axiom-dark border border-white/5 rounded-2xl">
+              <div className="font-mono text-xs text-axiom-accent mb-4">03</div>
+              <h3 className="text-lg font-semibold mb-3">You just ship</h3>
+              <p className="text-sm text-gray-400 leading-relaxed">
+                When we win, you get a standard PO from Axiom Group — not from the government — at dealer pricing. Drop-ship to the address on the order. We pay NET 30 and own everything else.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="p-8 bg-axiom-dark border border-white/5 rounded-2xl">
+              <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-6">What we'll ask you for</h4>
+              <ul className="space-y-3 text-sm text-gray-300">
+                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-axiom-accent rounded-full"></span>Standard dealer pricing — no stocking requirement, no minimums</li>
+                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-axiom-accent rounded-full"></span>Spec sheets and product data for the lines we quote</li>
+                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-axiom-accent rounded-full"></span>A per-bid letter of authorization when a solicitation requires one</li>
+              </ul>
+            </div>
+            <div className="p-8 bg-axiom-dark border border-white/5 rounded-2xl">
+              <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-6">What you'll never deal with</h4>
+              <ul className="space-y-3 text-sm text-gray-300">
+                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-axiom-accent rounded-full"></span>SAM registration, FAR clauses, and government certifications</li>
+                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-axiom-accent rounded-full"></span>Government invoicing, payment portals, and collection cycles</li>
+                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-axiom-accent rounded-full"></span>Bid protests, compliance paperwork, and the end-customer relationship</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <a href="#contact" className="inline-block px-8 py-4 bg-axiom-accent text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors">
+              Start the Conversation
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Execution Model Section */}
+      <section className="py-24 bg-axiom-dark">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="bg-axiom-gray border border-white/5 rounded-2xl p-10 md:p-14">
             <h3 className="text-center text-xl font-semibold mb-14">Our Execution Model</h3>
 
             <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-6">
@@ -685,7 +800,7 @@ function App() {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Let's Work Together</h2>
             <p className="text-sm text-gray-400 max-w-2xl mx-auto leading-relaxed">
-              Whether you're a contracting officer, prime contractor, or agency buyer, we'd like to hear from you.
+              Contracting officer with a requirement? Manufacturer looking for a government channel? Prime contractor building a team? Tell us what you need.
             </p>
           </div>
 
@@ -747,6 +862,26 @@ function App() {
                     className="w-full px-4 py-3 bg-axiom-dark border border-white/10 rounded-lg text-sm text-white placeholder-gray-500 focus:outline-none focus:border-axiom-accent/50 transition-colors"
                     placeholder="Agency or company name"
                   />
+                </div>
+
+                <div>
+                  <label htmlFor="inquiryType" className="block text-xs font-medium text-gray-400 mb-2">
+                    I am a...
+                  </label>
+                  <select
+                    id="inquiryType"
+                    name="inquiryType"
+                    required
+                    value={formData.inquiryType}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-axiom-dark border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-axiom-accent/50 transition-colors"
+                  >
+                    <option value="" disabled>Select one</option>
+                    <option value="Government buyer">Government buyer / contracting officer</option>
+                    <option value="Manufacturer or supplier">Manufacturer or supplier</option>
+                    <option value="Prime contractor">Prime contractor</option>
+                    <option value="Other">Other</option>
+                  </select>
                 </div>
 
                 <div>
