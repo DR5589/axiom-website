@@ -222,8 +222,8 @@ function App() {
             <span className="text-xs text-gray-400">SBA-Certified Service-Disabled Veteran-Owned Small Business</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.25rem] font-bold tracking-tight mb-6 leading-[1.05]">
-            We put manufacturers' products<br />
+          <h1 className="text-4xl sm:text-5xl md:text-[3.5rem] lg:text-[4rem] font-bold tracking-tight mb-6 leading-[1.05] text-balance">
+            We put manufacturers' products{' '}
             <span className="text-gray-400">on government contracts.</span>
           </h1>
 
