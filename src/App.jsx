@@ -81,7 +81,7 @@ const NAICS = {
   ],
 }
 
-function LogoCard({ src, alt, text, blurb, tall, keepColor }) {
+function LogoCard({ src, alt, text, blurb, tall, keepColor, imgClass }) {
   return (
     <div className="p-6 md:p-8 bg-axiom-gray border border-white/5 rounded-xl text-center hover:border-axiom-accent/30 hover:-translate-y-0.5 transition-all group">
       <div className={`${tall ? 'h-12' : 'h-10'} flex items-center justify-center gap-3 mb-3`}>
@@ -89,7 +89,7 @@ function LogoCard({ src, alt, text, blurb, tall, keepColor }) {
           <img
             src={src}
             alt={alt || text}
-            className={`${tall ? 'h-11' : 'h-8'} w-auto ${keepColor ? '' : 'brightness-0 invert'} opacity-70 group-hover:opacity-100 transition-opacity`}
+            className={`${imgClass || (tall ? 'h-11' : 'h-8')} w-auto ${keepColor ? '' : 'brightness-0 invert'} opacity-70 group-hover:opacity-100 transition-opacity`}
           />
         )}
         {text && <span className="text-xl font-bold text-white opacity-80 group-hover:opacity-100 transition-opacity">{text}</span>}
@@ -430,7 +430,7 @@ function App() {
           <div className="mb-10 reveal">
             <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-5 text-center">IT &amp; Cybersecurity</h4>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-              <LogoCard src="/logos/dell.svg" alt="Dell" blurb="Workstations, servers, displays" />
+              <LogoCard src="/logos/dell.svg" alt="Dell" blurb="Workstations, servers, displays" imgClass="h-10" />
               <LogoCard src="/logos/cisco.svg" alt="Cisco" blurb="Networking, switches, security" />
               <LogoCard src="/logos/paloalto.svg" alt="Palo Alto Networks" blurb="Next-gen firewalls, Panorama" />
               <LogoCard src="/logos/fortinet.svg" alt="Fortinet" blurb="FortiGate firewalls, SD-WAN" />
