@@ -136,7 +136,7 @@ function App() {
           <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6 text-xs text-gray-400">
             <span className="font-medium text-white">SDVOSB Certified</span>
             <span className="hidden md:inline text-gray-600">•</span>
-            <span className="font-medium text-white">Sole-Source Eligible to $5M</span>
+            <span className="font-medium text-white">SBA VetCert Certified SDVOSB</span>
             <span className="hidden md:inline text-gray-600">•</span>
             <span className="font-mono"><span className="text-gray-500">UEI:</span> XSVAANVXZGM1</span>
             <span className="hidden md:inline text-gray-600">•</span>
@@ -157,7 +157,7 @@ function App() {
               <div className="text-xs font-semibold text-axiom-accent uppercase tracking-wider mb-3">Government Buyers</div>
               <h3 className="text-xl font-bold mb-3">One SDVOSB vendor. Four verticals.</h3>
               <p className="text-sm text-gray-400 leading-relaxed mb-4">
-                Set-aside and sole-source eligible to $5M, TAA-compliant sourcing through authorized channels, 24–48 hour quotes, GPC accepted.
+                SDVOSB and small business set-aside eligible, TAA-compliant sourcing through authorized channels, 24–48 hour quotes, GPC accepted.
               </p>
               <span className="text-sm text-axiom-accent group-hover:underline">See what we deliver ↓</span>
             </a>
@@ -549,7 +549,7 @@ function App() {
                 <ul className="space-y-2 text-sm text-gray-300">
                   <li className="flex items-center gap-2">
                     <span className="w-1 h-1 bg-axiom-accent rounded-full"></span>
-                    SDVOSB sole-source eligibility up to $5M
+                    SBA VetCert certified SDVOSB
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1 h-1 bg-axiom-accent rounded-full"></span>
@@ -594,8 +594,8 @@ function App() {
                     <span className="text-sm text-white font-medium">CONUS</span>
                   </div>
                   <div className="flex justify-between items-center py-4 border-b border-white/5">
-                    <span className="text-sm text-gray-400">Sole Source</span>
-                    <span className="text-sm text-white font-medium">Eligible to $5M</span>
+                    <span className="text-sm text-gray-400">Certification</span>
+                    <span className="text-sm text-white font-medium">SBA VetCert SDVOSB</span>
                   </div>
                   <div className="flex justify-between items-center py-4">
                     <span className="text-sm text-gray-400">Payment</span>
