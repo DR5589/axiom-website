@@ -1,40 +1,5 @@
 import { useState, useEffect } from 'react'
 
-const PILL = {
-  executed: 'text-emerald-400 border-emerald-400/40',
-  delivered: 'text-emerald-400 border-emerald-400/40',
-  awarded: 'text-axiom-accent border-axiom-accent/40',
-  progress: 'text-amber-400 border-amber-400/40',
-}
-
-const RECORD = [
-  {
-    group: 'Federal',
-    rows: [
-      { id: '15F06726D0000894', who: 'Federal Bureau of Investigation', what: 'Specialized OSINT Tools IDIQ · 5-year vehicle', pill: 'AWARDED SEPT 2026', tone: 'awarded' },
-      { id: '554-P6L397', who: 'VA Eastern Colorado Health Care System', what: 'Dell 4K workstation displays · SDVOSB set-aside', pill: 'DELIVERED · PAID', tone: 'delivered' },
-      { id: 'N6449826P2208', who: 'NSWC Philadelphia (NAVSEA)', what: '52-line COTS electronics, single consolidated delivery', pill: 'IN DELIVERY', tone: 'progress' },
-    ],
-  },
-  {
-    group: 'Cooperative Vehicles',
-    rows: [
-      { id: 'RFP 29.26', who: 'EPIC6 Cooperative', what: 'HVAC · 5-year vehicle', pill: 'FULLY EXECUTED', tone: 'executed' },
-      { id: 'RFP 15.26', who: 'EPIC6 Cooperative', what: 'Office Supplies, Furniture & Services', pill: 'FULLY EXECUTED', tone: 'executed' },
-      { id: 'RFP 22.26', who: 'EPIC6 Cooperative', what: 'Computer Hardware, Software, Services & Supplies', pill: 'AWARDED', tone: 'awarded' },
-      { id: 'ESC-2', who: 'Goodbuy Cooperative', what: 'HVAC Filtration catalog', pill: 'AWARDED', tone: 'awarded' },
-    ],
-  },
-  {
-    group: 'State & Local',
-    rows: [
-      { id: 'PO 4500466722', who: 'City of Houston Airport System', what: 'Air filtration · 18 line items, on schedule', pill: 'DELIVERED', tone: 'delivered' },
-      { id: 'Bid 2026-2027', who: 'Avoyelles Parish School Board (LA)', what: 'District air filter program', pill: 'AWARDED', tone: 'awarded' },
-      { id: 'BidBuy', who: 'Illinois Department of Corrections', what: '9 awards across 8 facilities, 2026', pill: 'AWARDED', tone: 'awarded' },
-    ],
-  },
-]
-
 const NAICS = {
   'Distribution': [
     ['423430', 'Computer & Software Wholesalers'],
@@ -163,7 +128,6 @@ function App() {
 
   const navLinks = [
     ['#services', 'Services'],
-    ['#record', 'Record'],
     ['#partners', 'Partners'],
     ['#suppliers', 'For Suppliers'],
     ['#about', 'About'],
@@ -366,58 +330,8 @@ function App() {
         </div>
       </section>
 
-      {/* Contract Record */}
-      <section id="record" className="py-28 bg-axiom-dark">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-14 reveal">
-            <Eyebrow>2026 Contract Record</Eyebrow>
-            <h2 className="text-4xl font-bold mb-4">Awarded. Executed. Delivered.</h2>
-            <p className="text-sm text-gray-400 max-w-2xl mx-auto leading-relaxed">
-              Every line below is a real contract number. References available on request.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-            {[
-              ['3', 'Federal awards, 2026'],
-              ['5', 'Contract vehicles held'],
-              ['9', 'Illinois BidBuy awards'],
-              ['10', 'Authorized OEM partners'],
-            ].map(([n, label]) => (
-              <div key={label} className="reveal p-6 bg-axiom-gray border border-white/5 rounded-2xl text-center">
-                <div className="font-mono text-3xl font-bold text-white mb-1">{n}</div>
-                <div className="text-xs text-gray-500">{label}</div>
-              </div>
-            ))}
-          </div>
-
-          <div className="reveal bg-axiom-gray border border-white/5 rounded-2xl overflow-hidden">
-            {RECORD.map((g) => (
-              <div key={g.group}>
-                <div className="px-6 py-3 bg-axiom-dark/60 border-y border-white/5 first:border-t-0">
-                  <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">{g.group}</h4>
-                </div>
-                <div className="divide-y divide-white/5">
-                  {g.rows.map((r) => (
-                    <div key={r.id + r.who} className="px-6 py-4 flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
-                      <span className="font-mono text-xs text-gray-500 md:w-40 flex-shrink-0">{r.id}</span>
-                      <span className="text-sm text-white flex-grow">
-                        {r.who} <span className="text-gray-500">· {r.what}</span>
-                      </span>
-                      <span className={`font-mono text-xs font-semibold tracking-widest border rounded px-2.5 py-1 self-start md:self-auto whitespace-nowrap ${PILL[r.tone]}`}>
-                        {r.pill}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Partners */}
-      <section id="partners" className="py-28 bg-axiom-gray">
+      <section id="partners" className="py-28 bg-axiom-dark">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-14 reveal">
             <Eyebrow>Authorized Distributor</Eyebrow>
@@ -465,7 +379,7 @@ function App() {
       </section>
 
       {/* For Suppliers */}
-      <section id="suppliers" className="py-28 bg-axiom-dark">
+      <section id="suppliers" className="py-28 bg-axiom-gray">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-14 reveal">
             <Eyebrow>For Manufacturers &amp; Suppliers</Eyebrow>
@@ -517,9 +431,9 @@ function App() {
       </section>
 
       {/* Execution Model */}
-      <section className="py-24 bg-axiom-gray">
+      <section className="py-24 bg-axiom-dark">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="reveal bg-axiom-dark border border-white/5 rounded-2xl p-10 md:p-14">
+          <div className="reveal bg-axiom-gray border border-white/5 rounded-2xl p-10 md:p-14">
             <h3 className="text-center text-xl font-semibold mb-14">How an order runs</h3>
 
             <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-6">
